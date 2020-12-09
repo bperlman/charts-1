@@ -56,8 +56,7 @@ memory: 200Mi
 ##
 ## e.g. "role: worker-general"
 ## It is a good idea to have a node pool that only runs PgBouncers and to use this selector to schedule them there.
-nodeSelector: null
-  ##role: proxies
+#nodeSelector:
 
 ## Probe (health check) configuration.
 ## If username and password aren't configured, they are defaulted as the global username and password.
