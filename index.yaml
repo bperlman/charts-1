@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   pgbouncer:
   - apiVersion: v1
-    created: "2020-12-09T14:49:08.307574-05:00"
+    created: "2020-12-09T14:55:05.275599-05:00"
     description: Chart for PGBouncer
     digest: b5379a6415a4a68eaf7946f4cc01e31d82278e21ef113c3bcd5da3046f75adb4
     home: https://pgbouncer.github.io
@@ -17,10 +17,10 @@ entries:
     sources:
     - https://github.com/clearbit/charts
     urls:
-    - https://raw.githubusercontent.com/bperlman/charts-1/master/pgbouncer-0.2.2.tgz
+    - https://bperlman.github.io/charts-1/pgbouncer-0.2.2.tgz
     version: 0.2.2
   - apiVersion: v1
-    created: "2020-12-09T14:49:08.307081-05:00"
+    created: "2020-12-09T14:55:05.275105-05:00"
     description: Chart for PGBouncer
     digest: e432a354ea8317da886feec8b1819b8dc603f46db9bc97d8e371fa1b6c413ac3
     home: https://pgbouncer.github.io
@@ -35,6 +35,6 @@ entries:
     sources:
     - https://github.com/clearbit/charts
     urls:
-    - https://raw.githubusercontent.com/bperlman/charts-1/master/pgbouncer-0.2.0.tgz
+    - https://bperlman.github.io/charts-1/pgbouncer-0.2.0.tgz
     version: 0.2.0
-generated: "2020-12-09T14:49:08.306091-05:00"
+generated: "2020-12-09T14:55:05.274272-05:00"
