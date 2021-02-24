@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}
@@ -18,6 +18,13 @@ spec:
       labels:
         app: {{ .Release.Name }}
     spec:
+      selectors:
+        matchLabels:
+            labels:
+            app: {{ .Release.Name }}
+            chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+            release: "{{ .Release.Name }}"
+            heritage: "{{ .Release.Service }}"
       containers:
       - name: {{ .Release.Name }}
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
