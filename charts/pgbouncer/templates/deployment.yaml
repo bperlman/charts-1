@@ -6,6 +6,9 @@ metadata:
     app: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.replicasCount }}
+  selector:
+      matchLabels:
+        app: {{ .Release.Name }}
   template:
     metadata:
       annotations:
@@ -15,9 +18,6 @@ spec:
       labels:
         app: {{ .Release.Name }}
     spec:
-      selector:
-        matchLabels:
-          app: {{ .Release.Name }}
       containers:
       - name: {{ .Release.Name }}
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
