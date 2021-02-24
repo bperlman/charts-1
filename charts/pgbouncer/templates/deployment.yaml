@@ -17,13 +17,16 @@ spec:
         checksum/pgbouncer-probes-secret: {{ include (print $.Template.BasePath "/secret-probes.yaml") . | sha256sum }}
       labels:
         app: {{ .Release.Name }}
+        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+        release: "{{ .Release.Name }}"
+        heritage: "{{ .Release.Service }}"
     spec:
-      selectors:
+      selector:
         matchLabels:
-            app: {{ .Release.Name }}
-            chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
-            release: "{{ .Release.Name }}"
-            heritage: "{{ .Release.Service }}"
+          app: {{ .Release.Name }}
+          chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+          release: "{{ .Release.Name }}"
+          heritage: "{{ .Release.Service }}"
       containers:
       - name: {{ .Release.Name }}
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
