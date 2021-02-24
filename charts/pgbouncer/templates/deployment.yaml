@@ -20,7 +20,6 @@ spec:
     spec:
       selectors:
         matchLabels:
-            labels:
             app: {{ .Release.Name }}
             chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
             release: "{{ .Release.Name }}"
